@@ -5,24 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            background-color: aliceblue;
-            padding: 27px;
-            font-size: 21px;
-            text-align: center;
-            text-transform: uppercase;
-        }
 
-        li {
-            margin: auto;
-            width: fit-content;
-            list-style-type: none;
-        }
-    </style>
 </head>
 
 <body>
+    <%- include ('partials/nav.ejs') %>
     <p>this is a temp website </p>
     <p>welcome! <bold> <%= person %></bold>
     </p>

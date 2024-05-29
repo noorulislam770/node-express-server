@@ -9,11 +9,11 @@ app.set("view engine", "ejs");
 // listen on a specfic route
 app.get("/", (req, res) => {
   // send a text response
-  res.send("this is the homepage");
+  res.render("index");
 });
 
 app.get("/about", (req, res) => {
-  res.send("About Page");
+  res.render("about");
 });
 
 app.get("/profile/:name", (req, res) => {
