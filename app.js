@@ -1,8 +1,10 @@
 // require express
+const { name } = require("ejs");
 const express = require("express");
 
 // initiate the express app
 const app = express();
+app.set("view engine", "ejs");
 
 // listen on a specfic route
 app.get("/", (req, res) => {
@@ -15,7 +17,12 @@ app.get("/about", (req, res) => {
 });
 
 app.get("/profile/:name", (req, res) => {
-  res.send("profile id is " + req.params.name);
+  const data = {
+    age: 23,
+    job: "Athlete",
+  };
+  res.render("profile", { person: req.params.name, data: data });
+  //   res.send("profile id is " + req.params.name);
 });
 
 // listen for requests
