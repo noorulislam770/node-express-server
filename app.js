@@ -14,7 +14,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.render("about");
+  console.log(req.query);
+  res.render("about", { qs: req.query });
 });
 
 app.get("/profile/:name", (req, res) => {
