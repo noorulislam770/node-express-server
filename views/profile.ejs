@@ -13,6 +13,12 @@
             text-align: center;
             text-transform: uppercase;
         }
+
+        li {
+            margin: auto;
+            width: fit-content;
+            list-style-type: none;
+        }
     </style>
 </head>
 
@@ -23,6 +29,12 @@
 
     <p> Age : <%= data.age %></p>
     <p> Job : <%= data.job %></p>
+    <h2>friends</h2>
+    <ul>
+        <% data.friends.forEach ((friend) => { %>
+        <li><%= friend %></li>
+        <% }) %>
+    </ul>
 </body>
 
 </html>

@@ -20,6 +20,7 @@ app.get("/profile/:name", (req, res) => {
   const data = {
     age: 23,
     job: "Athlete",
+    friends: ["hammad", "ali", "ahmad"],
   };
   res.render("profile", { person: req.params.name, data: data });
   //   res.send("profile id is " + req.params.name);
