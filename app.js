@@ -5,6 +5,7 @@ const express = require("express");
 // initiate the express app
 const app = express();
 app.set("view engine", "ejs");
+app.use("/assets", express.static("assets"));
 
 // listen on a specfic route
 app.get("/", (req, res) => {
